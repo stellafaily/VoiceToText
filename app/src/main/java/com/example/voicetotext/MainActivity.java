@@ -34,7 +34,9 @@ public abstract class MainActivity extends AppCompatActivity implements View.OnC
         tv = (TextView) findViewById(R.id.tv);
         btn.setOnClickListener(this);
 
-
+        // if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)
+        //      != PackageManager.PERMISSION_GRANTED)
+        //ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.RECORD_AUDIO}, 1);
 
         intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE,getPackageName());
